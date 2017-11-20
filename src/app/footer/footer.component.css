@@ -1,0 +1,69 @@
+/*********************************************************************************/
+/* Footer                                                                        */
+/*********************************************************************************/
+
+footer {
+  text-align: center;
+}
+
+footer .title span {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/*********************************************************************************/
+/* Copyright                                                                     */
+/*********************************************************************************/
+
+#copyright {
+  overflow: hidden;
+  padding: 1em 0em;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+#copyright p {
+  letter-spacing: 0.20em;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 0.80em;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+#copyright a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/*********************************************************************************/
+/* Icon Styles                                                            */
+/*********************************************************************************/
+
+ul.icon {
+  margin: 0;
+  padding: 1em 1em 1em 1em;
+  list-style: none;
+}
+
+ul.icon li {
+  display: inline-block;
+  padding: 0.2em 2em;
+  font-size: 2em;
+}
+
+ul.icon li span {
+  display: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul.icon li a {
+  color: #FFF;
+}
+
+ul.icon li a:before {
+  display: inline-block;
+  background: rgba(0, 0, 0, 0.2);
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+}

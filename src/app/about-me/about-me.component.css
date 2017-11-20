@@ -1,0 +1,39 @@
+#about-me {
+  overflow: hidden;
+  padding: 8em 0em;
+  text-align: justify;
+  color: rgb(0, 0, 0);
+}
+
+#about-me .content {
+  padding: 0em 0em 0em 23em;
+}
+
+#about-me a,
+#about-me strong {
+  color: rgb(0, 0, 0);
+}
+
+.image-cropper {
+  width: 20em;
+  height: 20em;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+img {
+  display: inline;
+  margin: 0 auto;
+  height: 100%;
+  width: auto;
+}

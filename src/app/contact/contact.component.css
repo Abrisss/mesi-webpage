@@ -1,0 +1,29 @@
+/*ICONS*/
+
+.icon-container {
+  display: inline-block;
+  /*margin: 2em;*/
+  /*padding: 1em;*/
+  text-align: center;
+}
+
+.my-text {
+  padding: 1em;
+  display: block;
+}
+
+.my-icon {
+  vertical-align: middle;
+  padding: 0.2em 2em;
+  font-size: 3em;
+}
+
+/*MAP*/
+
+.map {
+  padding: 2em 6em;
+}
+
+agm-map {
+  height: 400px;
+}

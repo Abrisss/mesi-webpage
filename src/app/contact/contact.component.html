@@ -1,16 +1,41 @@
-<div id="wrapper4">
-  <div id="footer" class="container">
-    <div>
-      <header class="title">
-        <h2>Get in touch</h2>
-        <span class="byline">Phasellus nec erat sit amet nibh pellentesque congue</span></header>
-      <ul class="contact">
-        <li><a href="#" class="icon icon-twitter"><span>Twitter</span></a></li>
-        <li><a href="#" class="icon icon-facebook"><span></span></a></li>
-        <li><a href="#" class="icon icon-dribbble"><span>Pinterest</span></a></li>
-        <li><a href="#" class="icon icon-tumblr"><span>Google+</span></a></li>
-        <li><a href="#" class="icon icon-rss"><span>Pinterest</span></a></li>
-      </ul>
+<div id="wrapper3">
+  <div class="container">
+    <div class="row">
+      <div class="col">col</div>
+      <div class="col">col</div>
+      <div class="col">col</div>
+      <div class="col">col</div>
+    </div>
+
+    <div class="row">
+      <div class="icon-container col">
+        <span class='fa fa-mobile my-icon'></span>
+        <span class="my-text">06-20-773-9353</span>
+      </div>
+
+      <div class="icon-container col">
+        <span class='fa fa-envelope my-icon'></span>
+        <span class="my-text">emese.menyhart01@gmail.com</span>
+      </div>
+
+      <div class="icon-container col">
+        <span class='fa fa-user my-icon'></span>
+        <span class="my-text">Hello World</span>
+      </div>
+
+      <div class="icon-container col">
+        <span class='fa fa-university my-icon'></span>
+        <span class="my-text">Hello World2</span>
+      </div>
     </div>
   </div>
+
+  <div class="map">
+    <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
+      <agm-marker
+        [latitude]="lat" [longitude]="lng" [title]="title">
+      </agm-marker>
+    </agm-map>
+  </div>
+
 </div>

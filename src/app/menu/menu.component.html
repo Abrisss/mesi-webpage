@@ -1,18 +1,17 @@
 <div id="header-wrapper">
   <div id="header" class="container">
     <div id="logo">
-      <span class="icon icon-leaf"></span>
-      <h1><a href="#">Menyhárt Emese - pszichológus</a></h1>
+      <span class="fa fa-envira"></span>
+      <h1><a href="">Menyhárt Emese</a></h1>
+      <span>pszichológus</span>
 
     </div>
-    <div id="menu">
+    <nav id="menu">
       <ul>
-        <li class="current_page_item"><a href="#" accesskey="1" title="">Homepage</a></li>
-        <li><a href="#" accesskey="2" title="">Our Clients</a></li>
-        <li><a href="#" accesskey="3" title="">About Us</a></li>
-        <li><a href="#" accesskey="4" title="">Careers</a></li>
-        <li><a href="#" accesskey="5" title="">Contact Us</a></li>
+        <li><a [routerLink]="['about-me']" routerLinkActive="selected">Bemutatkozás</a></li>
+        <li><a [routerLink]="['blog']" routerLinkActive="selected">Blog</a></li>
+        <li><a [routerLink]="['contact']" routerLinkActive="selected">Elérhetőség</a></li>
       </ul>
-    </div>
+    </nav>
   </div>
 </div>
