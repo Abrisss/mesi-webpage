@@ -1,6 +1,5 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
-import {HttpModule} from '@angular/http';
 import {FormsModule} from '@angular/forms';
 
 import {AppComponent} from './app.component';
@@ -13,6 +12,7 @@ import {FooterComponent} from './footer/footer.component';
 import {AngularFontAwesomeModule} from 'angular-font-awesome';
 import {AgmCoreModule} from '@agm/core';
 import {SendMessageComponent} from './send-message/send-message.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,7 +26,7 @@ import {SendMessageComponent} from './send-message/send-message.component';
   ],
   imports: [
     BrowserModule,
-    HttpModule,
+    HttpClientModule,
     FormsModule,
     AngularFontAwesomeModule,
     AgmCoreModule.forRoot({
