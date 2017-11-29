@@ -1,0 +1,15 @@
+#newsletter {
+  overflow: hidden;
+  padding: 8em 0em;
+  background: #EDEDED;
+  text-align: center;
+}
+
+#newsletter .title h2 {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+#newsletter .content {
+  width: 600px;
+  margin: 0px auto;
+}
