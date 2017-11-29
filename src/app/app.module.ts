@@ -12,6 +12,7 @@ import {AboutMeComponent} from './about-me/about-me.component';
 import {FooterComponent} from './footer/footer.component';
 import {AngularFontAwesomeModule} from 'angular-font-awesome';
 import {AgmCoreModule} from '@agm/core';
+import {SendMessageComponent} from './send-message/send-message.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import {AgmCoreModule} from '@agm/core';
     ContactComponent,
     BlogComponent,
     AboutMeComponent,
-    FooterComponent
+    FooterComponent,
+    SendMessageComponent
   ],
   imports: [
     BrowserModule,
