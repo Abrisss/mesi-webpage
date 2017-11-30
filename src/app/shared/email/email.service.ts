@@ -1,22 +1,25 @@
 import {Injectable} from '@angular/core';
 
 import {Observable} from 'rxjs/Observable';
-import {HttpClient} from '@angular/common/http';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 
 @Injectable()
 export class EmailService {
 
-  // private url = 'https://api.mailgun.net/v3/sandbox489ebce6b1d84d53a8a30b98a04221a4.mailgun.org/messages';
+  private url = 'https://api.mailgun.net/v3/sandbox489ebce6b1d84d53a8a30b98a04221a4.mailgun.org/messages';
   private proxyUrl = 'https://cors-anywhere.herokuapp.com/';
-  private url2 =
-    'https://api:key-f84da6698040eed2990e177d41666e91@api.mailgun.net/v3/sandbox489ebce6b1d84d53a8a30b98a04221a4.mailgun.org/messages';
   private receiverAddress = 'menyhartabraham@gmail.com';
+
 
   constructor(private httpClient: HttpClient) {
   }
 
   postMessage(senderName: string, senderAddress: string, senderText: string): Observable<any> {
-    return this.httpClient.post(this.url2, this.createBody(senderName, senderAddress, senderText));
+    return this.httpClient.post(this.proxyUrl + this.url2,
+      this.createBody(senderName, senderAddress, senderText), {
+        headers: this.createHeader()
+      }
+    );
   }
 
   private createBody(senderName: string, senderAddress: string, senderText: string) {
@@ -26,5 +29,14 @@ export class EmailService {
       text: senderText
     };
   }
+
+  private createHeader(): HttpHeaders {
+    let httpHeaders = new HttpHeaders();
+    // httpHeaders.append('Authorization', this.key);
+    httpHeaders = httpHeaders.append('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+    // httpHeaders = httpHeaders.append('Access-Control-Allow-Origin', 'http://localhost:8200');
+    return httpHeaders;
+  }
+
 
 }
