@@ -1,9 +1,9 @@
 /*ICONS*/
 
 .icon-container {
-  display: inline-block;
-  /*margin: 2em;*/
-  /*padding: 1em;*/
+  /*display: inline-block;*/
+  /*!*margin: 2em;*!*/
+  /*!*padding: 1em;*!*/
   text-align: center;
 }
 
@@ -15,7 +15,7 @@
 .my-icon {
   vertical-align: middle;
   padding: 0.2em 2em;
-  font-size: 3em;
+  font-size: 2.5em;
 }
 
 /*MAP*/

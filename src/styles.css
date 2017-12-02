@@ -40,12 +40,6 @@ a {
 a:hover {
   text-decoration: none;
 }
-
-.container {
-  margin: 0px auto;
-  width: 1200px;
-}
-
 /*********************************************************************************/
 /* Wrapper                                                                       */
 /*********************************************************************************/
@@ -58,7 +52,7 @@ a:hover {
   background: #EDEDED;
 }
 
-#wrapper3 {
+.wrapper3 {
   overflow: hidden;
   padding: 3em 0em;
   background: #FFF;

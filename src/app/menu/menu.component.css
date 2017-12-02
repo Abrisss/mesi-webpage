@@ -2,20 +2,20 @@
 /* Menu                                                                          */
 /*********************************************************************************/
 
-#menu {
+.menu {
   width: 80%;
-  margin: 0px auto;
+  margin: 0 auto;
 }
 
-#menu ul {
+.menu ul {
   text-align: center;
 }
 
-#menu li {
+.menu li {
   display: inline-block;
 }
 
-#menu li a, #menu li span {
+.menu li a, #menu li span {
   display: inline-block;
   margin-left: 0.50em;
   padding: 1.5em 1.5em;
@@ -28,19 +28,18 @@
   color: #FFF;
 }
 
-#menu li:hover a, #menu li.active a, #menu li.active span {
+.menu li:hover a, #menu li.active a, #menu li.active span {
 }
 
-#menu li a.selected {
+.menu li a.selected {
   color: #242424;
-  text-underline: dash;
 }
 
 /*********************************************************************************/
 /* Header                                                                        */
 /*********************************************************************************/
 
-#header-wrapper {
+.header-wrapper {
   overflow: hidden;
   padding: 4em 0em;
   background: #57b036 url(../../assets/overlay.png) repeat;
@@ -50,33 +49,33 @@
 /* Logo                                                                          */
 /*********************************************************************************/
 
-#logo {
+.logo {
   padding: 5em 0em;
   text-align: center;
 }
 
-#logo h1 {
+.logo h1 {
   font-size: 3.5em;
   padding: 0.3em;
 }
 
-#logo a {
+.logo a {
   text-decoration: none;
   color: #FFF;
 }
 
-#logo span {
+.logo span {
   letter-spacing: 0.10em;
   text-transform: uppercase;
   font-size: 1.40em;
   color: rgba(255, 255, 255, 0.7);
 }
 
-#logo span a {
+.logo span a {
   color: rgba(255, 255, 255, 0.8);
 }
 
-#logo .fa {
+.logo .fa {
   font-size: 4em;
   color: rgba(255, 255, 255, 1);
 }
