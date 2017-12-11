@@ -8,11 +8,6 @@ import {Meta} from '@angular/platform-browser';
 })
 export class ContactComponent implements OnInit, OnDestroy {
 
-  lat = 47.505983;
-  lng = 19.070909;
-  zoom = 15;
-  title = 'Rózsa pszichológiai központ';
-
   constructor(private metaService: Meta) {
   }
 

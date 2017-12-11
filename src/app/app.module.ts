@@ -10,7 +10,6 @@ import {BlogComponent} from './blog/blog.component';
 import {AboutMeComponent} from './about-me/about-me.component';
 import {FooterComponent} from './footer/footer.component';
 import {AngularFontAwesomeModule} from 'angular-font-awesome';
-import {AgmCoreModule} from '@agm/core';
 import {SendMessageComponent} from './send-message/send-message.component';
 import {HttpClientModule} from '@angular/common/http';
 
@@ -29,9 +28,6 @@ import {HttpClientModule} from '@angular/common/http';
     HttpClientModule,
     FormsModule,
     AngularFontAwesomeModule,
-    AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyBP1DtEbH75Amr0qPH-MZxuaArdQjz7ydg'
-    }),
     routing
   ],
   providers: [],
