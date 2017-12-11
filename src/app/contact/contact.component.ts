@@ -1,5 +1,5 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import {Meta} from '@angular/platform-browser';
+import {Meta, Title} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-contact',
@@ -8,11 +8,12 @@ import {Meta} from '@angular/platform-browser';
 })
 export class ContactComponent implements OnInit, OnDestroy {
 
-  constructor(private metaService: Meta) {
+  constructor(private metaService: Meta,  private titleService: Title) {
   }
 
   ngOnInit() {
     this.metaService.addTag({property: 'description', content: 'Elérhetőség'});
+    this.titleService.setTitle('Elérhetőség');
   }
 
   ngOnDestroy() {
