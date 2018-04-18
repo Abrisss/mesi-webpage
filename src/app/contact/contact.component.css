@@ -1,4 +1,13 @@
 /*ICONS*/
+a {
+  color: black;
+  text-decoration: underline;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
 
 .icon-container {
   text-align: center;

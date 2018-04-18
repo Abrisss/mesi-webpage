@@ -1,28 +1,67 @@
-<div id="wrapper3">
-  <div id="newsletter" class="container">
-    <div class="title">
-      <h2>Newsletter Signup</h2>
-      <span class="byline">Integer sit amet pede vel arcu aliquet pretium</span></div>
-    <div class="content">
-      <form method="post" action="#">
-        <div class="row half">
-          <div class="6u">
-            <input type="text" class="text" name="name" placeholder="Name"/>
-          </div>
-          <div class="6u">
-            <input type="text" class="text" name="email" placeholder="Email"/>
-          </div>
-        </div>
-        <div class="row half">
-          <div class="12u">
-            <textarea name="message" placeholder="Message"></textarea>
-          </div>
-        </div>
-        <div class="row">
-          <div class="12u"><a href="#" class="button submit">Send Message</a></div>
-        </div>
-      </form>
-      <button (click)="postMessage()">aSD</button>
+<div class="wrapper3">
+  <form class="newsletter container" (ngSubmit)="sendMessage()">
+    <div class="form-group">
+      <input type="text"
+             class="form-control"
+             [(ngModel)]="emailTemplate.name"
+             name="name"
+             #name="ngModel"
+             required
+             placeholder="Név">
     </div>
-  </div>
+
+    <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
+      <div *ngIf="name.errors.required">
+        Név megadása kötelező!
+      </div>
+    </div>
+
+    <div class="form-group">
+      <input type="email"
+             class="form-control"
+             [(ngModel)]="emailTemplate.email"
+             name="email"
+             #email="ngModel"
+             email
+             required
+             placeholder="Email cím">
+    </div>
+
+    <div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert alert-danger">
+      <div *ngIf="email.errors.required">
+        Email cím megadása kötelező!
+      </div>
+
+      <div *ngIf="!email.errors.required && email.errors.email">
+        Az email cím formátuma nem megfelelő!
+      </div>
+    </div>
+
+    <div class="form-group">
+      <input type="text"
+             class="form-control"
+             [(ngModel)]="emailTemplate.subject"
+             name="subject"
+             placeholder="Tárgy">
+    </div>
+
+    <div class="form-group">
+      <textarea rows="10"
+                class="form-control"
+                [(ngModel)]="emailTemplate.text"
+                #text="ngModel"
+                name="text"
+                required
+                placeholder="Üzenet">
+      </textarea>
+    </div>
+
+    <div *ngIf="text.invalid && (text.dirty || text.touched)" class="alert alert-danger">
+      <div *ngIf="text.errors.required">
+        Üzenet megadása kötelező!
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-success">Küldés</button>
+  </form>
 </div>

@@ -1,15 +1,22 @@
-#newsletter {
-  overflow: hidden;
-  padding: 8em 0em;
-  background: #EDEDED;
-  text-align: center;
+.newsletter {
+  position: relative;
+  /*background: #f6f6f6;*/
+  padding-top: 3%;
+  padding-bottom: 5%;
+  margin: auto;
+  width: 80%;
 }
 
-#newsletter .title h2 {
-  color: rgba(0, 0, 0, 0.8);
+.container {
+  display: flex;
+  flex-direction: column;
+  /*align-items: center;*/
 }
 
-#newsletter .content {
-  width: 600px;
-  margin: 0px auto;
+button {
+  align-self: center;
+  width: 20%;
+  border: 0;
+  background: #57b036 url(../../assets/overlay.png);
+  font-weight: bold;
 }

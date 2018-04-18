@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {EmailService} from '../shared/email/email.service';
+import {EmailTemplate} from '../types/email-template';
 
 @Component({
   selector: 'app-send-message',
@@ -8,19 +9,18 @@ import {EmailService} from '../shared/email/email.service';
   providers: [EmailService]
 })
 export class SendMessageComponent implements OnInit {
+  private emailTemplate: EmailTemplate;
 
   constructor(private emailService: EmailService) {
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
+    this.emailTemplate = new EmailTemplate('', '', '', '');
   }
 
-  postMessage(): void {
-    this.emailService.postMessage('Mesi', 'mesi0628@gmail.com', 'Love you :)').subscribe(
-      data => {
-        console.log(data);
-      },
-      error => console.log(error)
-    );
+
+  sendMessage(): void {
+    console.log(this.emailTemplate);
+    this.emailService.sendMessage(this.emailTemplate);
   }
 }
