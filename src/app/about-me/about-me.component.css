@@ -1,4 +1,5 @@
 .about-me {
+  display: flex;
   overflow: hidden;
   padding: 3em 0;
   text-align: justify;
@@ -10,10 +11,46 @@
   color: rgb(0, 0, 0);
 }
 
-.image-cropper {
+.picture-cropper {
   width: 20em;
   height: 20em;
   overflow: hidden;
   border-radius: 50%;
   margin: 1em auto;
+}
+
+.picture {
+  padding: 2em 4em 2em 4em;
+}
+
+.text {
+  padding: 2em 4em 2em 0;
+}
+
+@media screen and (max-width: 1000px) {
+  .wrapper3 {
+    padding: 0;
+  }
+
+  .about-me {
+    flex-direction: column;
+    padding: 0;
+    align-content: center;
+    align-items: center;
+  }
+
+  .picture {
+    padding: 2em 2em 1em 2em;
+  }
+
+  .text {
+    padding: 2em 2em 4em 2em;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .picture-cropper {
+    width: 15em;
+    height: 15em;
+  }
 }
